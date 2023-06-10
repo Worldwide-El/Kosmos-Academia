@@ -1,0 +1,182 @@
+// ********** Google Fonts ******************************************************************************************
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Open+Sans&family=Playfair+Display:wght@400;700&family=Roboto&display=swap');
+
+
+// ********** Boostrap Themes ************************************************************************************
+
+$theme-colors: (
+    "primary": #CD0404, // Converts Bootstrap primary color to #CD0404. This change as well as other changes made to Bootstrap should be above the line of code where bootstrapp.css was imported
+    "secondary": #fff,
+  );
+
+
+@import "/node_modules/bootstrap/scss/bootstrap";
+
+
+// ******** Custom Scss **************************************************************************************
+
+@mixin header1($color) {      // A function is created in SCSS with @mixin. This function has one parameter; color. When this function is called, the content of the function is carried out, with changes to the parameter(s), in this case, color.
+    font-family: $headerFont;
+    font-weight: bolder;
+    color: $color;
+}
+
+
+@mixin header5($color) {      // A function is created in SCSS with @mixin. This function has one parameter; color. When this function is called, the content of the function is carried out, with changes to the parameter(s), in this case, color.
+    font-family: $headerFont;
+    font-weight: bold;
+    color: $color;
+}
+
+
+@mixin paragraphText($text-align){
+    font-family: $paragraphFont;
+    font-size: 18px;
+    text-align: $text-align;
+}
+
+
+$primary: #CD0404;
+$secondary: #fff;
+
+$headerFont : "GFS Didot", serif; // A variable in SCSS is created using $. This variable is gonna be used as the font-family of all headers(h1-h6)
+$paragraphFont: 'Roboto', sans-serif;
+$smallFont: 'Playfair Display', serif;
+
+
+#aboutUs{
+    figure{
+        float: right;
+        display: inline;
+        margin: 5px;
+        img{
+            border-radius: 50%; // This gives the image a rounded border
+        
+        }
+        figcaption{
+            text-align: center;
+            small{
+                font-family: $smallFont;
+                color: $primary;
+            }
+            h6{
+                font-family: $headerFont;
+                color:$primary;
+            }
+        }
+    }
+    .text-wrap{
+        h2{
+            @include header1($primary);
+        }
+        p{
+            font-family: $paragraphFont;
+            font-size: 18px;
+            text-align: start;
+        }
+        a{
+            font-family: $paragraphFont;
+        }
+    }
+}
+
+
+.carousel-item{
+    height: 84.6vh; // I want the carousel-item to cover the entire Viewport Height(vh).Instead of 100vh, I used 84.6 because the remaining viewport will be occupied by the navbar.
+    img{
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+    }
+    .carousel-caption{
+        h1{
+            @include header1($secondary); // The header1 function(@mixin header1) has been called here again.
+            line-height: 1.7;
+            padding-bottom: 20%;
+            a{
+                font-family: $headerFont;
+            }
+        }
+    }
+}
+
+
+.navbar-brand{
+    
+    h1{
+        @include header1($primary); // A function is called using @include. In this case, the function called was header1, with the parameter being the color of choice #CD0404. All the content of the function @mixin header1, will be applied here
+        // animation: fade 3s, ease-in 1s;
+    }
+    img{
+        max-height: 70px;   /* fits the nav-brand image in the navbar */
+    }
+}
+
+
+.nav-link{
+        h6{
+            color: #000;
+            font-family: $headerFont;
+            &:hover{
+                color: $primary;
+            }
+            i{color: $primary;}
+        }
+        small{
+            font-family: $smallFont;
+        }
+}
+
+
+
+#ourStaff{
+    background: linear-gradient(to right, $primary, #de3a3a );
+    .staff-header{
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0 auto;
+        h2{
+            @include header1($secondary);
+            background: linear-gradient(to right, #808080, $secondary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .staff-paragraph{
+        @include paragraphText(justify);
+        color:$secondary;
+    }
+    .row{
+        .card-body{
+            background: linear-gradient(to right, $secondary, #808080);
+            h5{
+                @include header5($primary);
+            }
+            small{
+                font-family: $smallFont;
+            }
+        }
+    }
+    .buttonContainer{
+        display: flex;
+        width: 100%;
+        a{
+            font-family: $paragraphFont;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// font-family: 'GFS Didot', serif; h1-h6
+// font-family: 'Roboto', sans-serif paragraph
+// font-family: 'Playfair Display', serif; small
+// font-family: 'Open Sans', sans-serif;

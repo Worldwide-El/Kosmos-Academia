@@ -1,0 +1,19 @@
+@mixin header1($color) {      // A function is created in SCSS with @mixin. This function has one parameter; color. When this function is called, the content of the function is carried out, with changes to the parameter(s), in this case, color.
+    font-family: $header-font;
+    font-weight: bolder;
+    color: $color;
+}
+
+
+@mixin header5($color) {      // A function is created in SCSS with @mixin. This function has one parameter; color. When this function is called, the content of the function is carried out, with changes to the parameter(s), in this case, color.
+    font-family: $header-font;
+    font-weight: bold;
+    color: $color;
+}
+
+
+@mixin paragraphText($text-align){
+    font-family: $paragraph-font;
+    font-size: 18px;
+    text-align: $text-align;
+}

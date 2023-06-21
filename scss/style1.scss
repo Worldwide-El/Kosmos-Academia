@@ -15,70 +15,48 @@ $theme-colors: (
 
 // ******** Custom Scss **************************************************************************************
 
-@mixin header1($color) {      // A function is created in SCSS with @mixin. This function has one parameter; color. When this function is called, the content of the function is carried out, with changes to the parameter(s), in this case, color.
-    font-family: $headerFont;
-    font-weight: bolder;
-    color: $color;
-}
-
-
-@mixin header5($color) {      // A function is created in SCSS with @mixin. This function has one parameter; color. When this function is called, the content of the function is carried out, with changes to the parameter(s), in this case, color.
-    font-family: $headerFont;
-    font-weight: bold;
-    color: $color;
-}
-
-
-@mixin paragraphText($text-align){
-    font-family: $paragraphFont;
-    font-size: 18px;
-    text-align: $text-align;
-}
-
-
-$primary: #CD0404;
-$secondary: #fff;
-
-$headerFont : "GFS Didot", serif; // A variable in SCSS is created using $. This variable is gonna be used as the font-family of all headers(h1-h6)
-$paragraphFont: 'Roboto', sans-serif;
-$smallFont: 'Playfair Display', serif;
+@import "mixins";
+@import "variables";
 
 
 #aboutUs{
-    figure{
-        float: right;
-        display: inline;
-        margin: 5px;
-        img{
-            border-radius: 50%; // This gives the image a rounded border
-        
-        }
-        figcaption{
-            text-align: center;
-            small{
-                font-family: $smallFont;
-                color: $primary;
+    .inner-div{
+        figure{
+            float: right;
+            display: inline;
+            margin: 5px;
+            img{
+                border-radius: 50%; // This gives the image a rounded border
+            
             }
-            h6{
-                font-family: $headerFont;
-                color:$primary;
+            figcaption{
+                text-align: center;
+                small{
+                    font-family: $small-font;
+                    color: $primary;
+                }
+                h6{
+                    font-family: $header-font;
+                    color:$primary;
+                }
             }
         }
-    }
-    .text-wrap{
-        h2{
-            @include header1($primary);
-        }
-        p{
-            font-family: $paragraphFont;
-            font-size: 18px;
-            text-align: start;
-        }
-        a{
-            font-family: $paragraphFont;
+        .text-wrap{
+            h2{
+                @include header1($primary);
+            }
+            p{
+                font-family: $paragraph-font;
+                font-size: 18px;
+                text-align: start;
+            }
+            a{
+                font-family: $paragraph-font;
+            }
         }
     }
 }
+    
 
 
 .carousel-item{
@@ -94,7 +72,7 @@ $smallFont: 'Playfair Display', serif;
             line-height: 1.7;
             padding-bottom: 20%;
             a{
-                font-family: $headerFont;
+                font-family: $header-font;
             }
         }
     }
@@ -116,14 +94,14 @@ $smallFont: 'Playfair Display', serif;
 .nav-link{
         h6{
             color: #000;
-            font-family: $headerFont;
+            font-family: $header-font;
             &:hover{
                 color: $primary;
             }
             i{color: $primary;}
         }
         small{
-            font-family: $smallFont;
+            font-family: $small-font;
         }
 }
 
@@ -154,7 +132,7 @@ $smallFont: 'Playfair Display', serif;
                 @include header5($primary);
             }
             small{
-                font-family: $smallFont;
+                font-family: $small-font;
             }
         }
     }
@@ -162,12 +140,28 @@ $smallFont: 'Playfair Display', serif;
         display: flex;
         width: 100%;
         a{
-            font-family: $paragraphFont;
+            font-family: $paragraph-font;
             width: 100%;
         }
     }
 }
 
+
+#newsletter-div{
+    min-height: 30vh;
+    .inner-div{
+        h5{
+           @include header5($primary);
+        }
+        p{
+            @include paragraphText(justify);
+        }
+        a.btn{
+            border: none;
+            border-radius: 30px;
+        }
+    }
+}
 
 
 

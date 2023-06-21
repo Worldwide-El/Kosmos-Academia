@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molaldh | Newsletter</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> <!-- The root path is served in app.js file using express.static-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style2.css"> <!-- The root path is served in app.js file using express.static-->
+
+    <!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/9cbf6e7fc5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="container box-container">
+            <div class="top-header">
+                <h1>Kosmos Academia Newsletter</h1>
+            </div>
+            <form action="/signup" method="post">
+                <div class="input-field">
+                    <input type="text" name="fName" class="input" placeholder="First Name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="lName" class="input" placeholder="Last Name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="email" name="email" class="input" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-field">
+                    <button type="submit">Sign Up</button>
+                </div>
+    
+                <div class="bottom">
+                    <div class="left">
+                        <input type="checkbox" id="check">
+                        <label for="check">Remember Me</label>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- jQuery CDN -->
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+
+     <!-- Bootstrap JavaScript  -->
+     <script src="/js/bootstrap.bundle.min.js"></script> <!-- The root path is served in app.js file using express.static-->
+ </body>
+ </html>

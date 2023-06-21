@@ -7,10 +7,10 @@
     <title>Portfolio</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> <!-- The root path is served in app.js file using express.static-->
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/css/style1.css"> <!-- The root path is served in app.js file using express.static-->
 
 <!-- FontAwesome -->
 <script src="https://kit.fontawesome.com/9cbf6e7fc5.js" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <h1>
-                    <img src="/public/images/free-globe-417-444764.png" alt="">
+                    <img src="/images/free-globe-417-444764.png" alt="">
 
                     KOSMOS ACADEMIA
                 </h1>
@@ -87,7 +87,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="/public/images/slide-1.jpg" class="d-block w-100" alt="slide-1.jpg">
+                    <img src="/images/slide-1.jpg" class="d-block w-100" alt="slide-1.jpg">
                     <div class="carousel-caption d-md-block">
                         <h1 class="text-centre text-uppercase">Tomorrow belongs to the people who prepare for it today.<br>
                             <a class="btn btn-primary text-uppercase" href="#" role="button">Join Now</a>
@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/public/images/slide-2.jpg" class="d-block w-100" alt="slide-1.jpg">
+                    <img src="/images/slide-2.jpg" class="d-block w-100" alt="slide-1.jpg">
                     <div class="carousel-caption d-md-block">
                         <h1 class="text-centre text-uppercase"> With a book and a pen, a child can change the world.<br>
                             <a class="btn btn-primary text-uppercase" href="#" role="button">Join Now</a>
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/public/images/slide-3.jpg" class="d-block w-100" alt="slide-3.jpg">                
+                    <img src="/images/slide-3.jpg" class="d-block w-100" alt="slide-3.jpg">                
                     <div class="carousel-caption d-md-block">
                         <h1 class="text-centre text-uppercase">Education is the mother of leadership.<br>
                             <a class="btn btn-primary text-uppercase" href="#" role="button">Join Now</a>
@@ -127,22 +127,24 @@
 
 
     <!-- About Section -->
-
-    <div class="container" id="aboutUs">
-        <figure>
-            <img src="/public/images/founder.jpg" alt="founder of Kosmos Academia">
-            <figcaption> 
-                <h6>Dr. Moladh Ibn Al Walid</h6>
-                <small>Founder, Kosmos Academia</small> 
-            </figcaption>
-        </figure>
-
-        <div class="text-wrap">
-            <h2 class="text-center text-uppercase">About Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint id provident eveniet maiores veniam corrupti dolores quidem! Porro autem, suscipit laboriosam nulla quaerat repellat sapiente pariatur eligendi officia quisquam dignissimos ad, dolores reiciendis culpa expedita aliquam, deleniti dolorum voluptatum blanditiis facere. Modi voluptatem optio quisquam accusamus. Ex, consectetur quod? Excepturi, esse quisquam. Maiores repudiandae ab veritatis asperiores nostrum accusantium nisi tempore praesentium dolor illum quae minus amet explicabo id vel itaque, dignissimos neque officiis non. Quam fuga ex sequi dolore qui libero, maiores non corrupti. Omnis porro sequi praesentium nesciunt sed repellendus, mollitia voluptatibus doloribus nemo placeat modi vero ab natus eius repudiandae quod ullam tempore amet culpa, cupiditate facere. Amet, tenetur rerum? Dolorem modi consectetur consequuntur vitae ex, blanditiis hic ut adipisci ipsam quaerat? Optio assumenda sequi aperiam tenetur qui cupiditate tempore unde accusamus dolorem, a necessitatibus cum vero quo voluptatum odio perspiciatis est, deleniti atque animi non neque impedit! Sapiente omnis aut quas. Rem, voluptate. Nisi sunt magni repellat eveniet ullam placeat sapiente pariatur neque porro earum, harum, delectus veritatis modi commodi expedita id molestias rem. Sapiente qui aspernatur similique quam doloremque fugit, recusandae, magnam voluptas eveniet iusto possimus vitae tempore consequuntur vel.</p>
-            <a href="#" class="btn btn-outline-primary"> Read More </a>
+    <div id="aboutUs">
+        <div class="container inner-div">
+            <figure>
+                <img src="/images/founder.jpg" alt="founder of Kosmos Academia">
+                <figcaption> 
+                    <h6>Dr. Moladh Ibn Al Walid</h6>
+                    <small>Founder, Kosmos Academia</small> 
+                </figcaption>
+            </figure>
+    
+            <div class="text-wrap">
+                <h2 class="text-center text-uppercase">About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint id provident eveniet maiores veniam corrupti dolores quidem! Porro autem, suscipit laboriosam nulla quaerat repellat sapiente pariatur eligendi officia quisquam dignissimos ad, dolores reiciendis culpa expedita aliquam, deleniti dolorum voluptatum blanditiis facere. Modi voluptatem optio quisquam accusamus. Ex, consectetur quod? Excepturi, esse quisquam. Maiores repudiandae ab veritatis asperiores nostrum accusantium nisi tempore praesentium dolor illum quae minus amet explicabo id vel itaque, dignissimos neque officiis non. Quam fuga ex sequi dolore qui libero, maiores non corrupti. Omnis porro sequi praesentium nesciunt sed repellendus, mollitia voluptatibus doloribus nemo placeat modi vero ab natus eius repudiandae quod ullam tempore amet culpa, cupiditate facere. Amet, tenetur rerum? Dolorem modi consectetur consequuntur vitae ex, blanditiis hic ut adipisci ipsam quaerat? Optio assumenda sequi aperiam tenetur qui cupiditate tempore unde accusamus dolorem, a necessitatibus cum vero quo voluptatum odio perspiciatis est, deleniti atque animi non neque impedit! Sapiente omnis aut quas. Rem, voluptate. Nisi sunt magni repellat eveniet ullam placeat sapiente pariatur neque porro earum, harum, delectus veritatis modi commodi expedita id molestias rem. Sapiente qui aspernatur similique quam doloremque fugit, recusandae, magnam voluptas eveniet iusto possimus vitae tempore consequuntur vel.</p>
+                <a href="#" class="btn btn-outline-primary"> Read More </a>
+            </div>
         </div>
     </div>
+    
 
 
     <!-- Meet Our Staff -->
@@ -160,7 +162,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/principal.jpg" class="card-img-top" alt="Principal">
+                        <img src="/images/principal.jpg" class="card-img-top" alt="Principal">
                         <div class="card-body">
                             <h5 class="card-title">Harold Cooper</h5>
                             <p><small class="card-text">-Principal</small></p>
@@ -170,7 +172,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/accountant.webp" class="card-img-top" alt="Accountant">
+                        <img src="/images/accountant.webp" class="card-img-top" alt="Accountant">
                         <div class="card-body">
                             <h5 class="card-title">Patti J. Locker</h5>
                             <p><small class="card-text">-Accountant</small></p>
@@ -180,7 +182,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/counselor.webp" class="card-img-top" alt="Counselor">
+                        <img src="/images/counselor.webp" class="card-img-top" alt="Counselor">
                         <div class="card-body">
                             <h5 class="card-title">Francesca Thompson</h5>
                             <p><small class="card-text">-Counselor</small></p>
@@ -189,7 +191,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/mens football coach.webp" class="card-img-top" alt="Mens Football Coach">
+                        <img src="/images/mens football coach.webp" class="card-img-top" alt="Mens Football Coach">
                         <div class="card-body">
                             <h5 class="card-title">Mateo Horvat</h5>
                             <p><small class="card-text">-Mens Football Coach</small></p>
@@ -199,7 +201,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/teacher-civics.jpg" class="card-img-top" alt="Civics Teacher">
+                        <img src="/images/teacher-civics.jpg" class="card-img-top" alt="Civics Teacher">
                         <div class="card-body">
                             <h5 class="card-title">Edgar D. Moreno</h5>
                             <p><small class="card-text">-Civics</small></p>
@@ -209,7 +211,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/teacher-physics.jpg" class="card-img-top" alt="Physics Teacher">
+                        <img src="/images/teacher-physics.jpg" class="card-img-top" alt="Physics Teacher">
                         <div class="card-body">
                             <h5 class="card-title">Lucas C. Carvalho</h5>
                             <p><small class="card-text">-Physics</small></p>
@@ -219,7 +221,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/teacher-economics.webp" class="card-img-top" alt="Economics Teacher">
+                        <img src="/images/teacher-economics.webp" class="card-img-top" alt="Economics Teacher">
                         <div class="card-body">
                             <h5 class="card-title">Vicki E. Kim</h5>
                             <p><small class="card-text">-Economics</small></p>
@@ -229,7 +231,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="card h-100">
-                        <img src="/public/images/teacher-math.jpg" class="card-img-top" alt="Math Teacher">
+                        <img src="/images/teacher-math.jpg" class="card-img-top" alt="Math Teacher">
                         <div class="card-body">
                             <h5 class="card-title">Jason M. Hinkley</h5>
                             <p><small class="card-text">-Mathematics</small></p>
@@ -244,6 +246,23 @@
     </div>
 
 
+    <!-- Newsletter Section -->
+
+    <div id="newsletter-div">
+        <div class="container mt-5 inner-div">
+            <h5 class="text-left text-uppercase">Sign up to our Newsletter Today!</h5>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Impedit ducimus cumque, optio suscipit numquam accusantium dolorem doloribus voluptate facilis, 
+                dignissimos recusandae nam sint, magni ipsum eos rerum at enim corrupti autem exercitationem! 
+                Sint ex alias expedita, cupiditate saepe officia molestias dolorum accusantium incidunt consequuntur eaque, 
+                facilis vero, qui eligendi earum.
+            </p>
+            <a href="signup" class="btn btn-primary btn-lg">Become a Member</a>
+        </div>
+    </div>
+
+
 
     
 
@@ -254,9 +273,6 @@
 
 
     <!-- Bootstrap JavaScript  -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- JavaScript File -->
-    <script src="index.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script> <!-- The root path is served in app.js file using express.static-->
 </body>
 </html>

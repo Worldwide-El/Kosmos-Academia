@@ -11348,36 +11348,36 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-#aboutUs figure {
+#aboutUs .inner-div figure {
   float: right;
   display: inline;
   margin: 5px;
 }
-#aboutUs figure img {
+#aboutUs .inner-div figure img {
   border-radius: 50%;
 }
-#aboutUs figure figcaption {
+#aboutUs .inner-div figure figcaption {
   text-align: center;
 }
-#aboutUs figure figcaption small, #aboutUs figure figcaption .small {
+#aboutUs .inner-div figure figcaption small, #aboutUs .inner-div figure figcaption .small {
   font-family: "Playfair Display", serif;
   color: #CD0404;
 }
-#aboutUs figure figcaption h6, #aboutUs figure figcaption .h6 {
+#aboutUs .inner-div figure figcaption h6, #aboutUs .inner-div figure figcaption .h6 {
   font-family: "GFS Didot", serif;
   color: #CD0404;
 }
-#aboutUs .text-wrap h2, #aboutUs .text-wrap .h2 {
+#aboutUs .inner-div .text-wrap h2, #aboutUs .inner-div .text-wrap .h2 {
   font-family: "GFS Didot", serif;
   font-weight: bolder;
   color: #CD0404;
 }
-#aboutUs .text-wrap p {
+#aboutUs .inner-div .text-wrap p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   text-align: start;
 }
-#aboutUs .text-wrap a {
+#aboutUs .inner-div .text-wrap a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -11463,4 +11463,22 @@ textarea.form-control-lg {
 #ourStaff .buttonContainer a {
   font-family: "Roboto", sans-serif;
   width: 100%;
+}
+
+#newsletter-div {
+  min-height: 30vh;
+}
+#newsletter-div .inner-div h5, #newsletter-div .inner-div .h5 {
+  font-family: "GFS Didot", serif;
+  font-weight: bold;
+  color: #CD0404;
+}
+#newsletter-div .inner-div p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: justify;
+}
+#newsletter-div .inner-div a.btn {
+  border: none;
+  border-radius: 30px;
 }
